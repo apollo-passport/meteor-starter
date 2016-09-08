@@ -5,19 +5,30 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "apollo-client": "^0.3.29",
-    "apollo-server": "^0.1.5",
+    "apollo-client": "^0.4.14",
+    "apollo-passport": "0.0.5",
+    "apollo-passport-local": "0.0.3",
+    "apollo-passport-mongodb": "0.0.1",
+    "apollo-passport-react": "0.0.2",
+    "apollo-server": "^0.2.8",
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
     "classnames": "^2.2.5",
     "express": "^4.14.0",
     "graphql": "^0.6.1",
     "graphql-tag": "^0.1.9",
+    "graphql-tools": "^0.6.5",
     "invariant": "^2.2.1",
     "meteor-node-stubs": "~0.2.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "react": "^15.0.1",
     "react-addons-pure-render-mixin": "^15.0.1",
     "react-apollo": "^0.3.0",
     "react-dom": "^15.0.1",
     "react-komposer": "^1.13.1",
-    "tracker-component": "^1.3.16"
+    "regenerator-runtime": "^0.9.5",
+    "tracker-component": "^1.3.16",
+    "winston": "^2.2.0"
   }
 }

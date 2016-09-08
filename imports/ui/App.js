@@ -2,17 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-apollo';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
-import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 import gql from 'graphql-tag';
 
+import { apolloPassport } from '../../client/apollo';
+import { LoginButtons } from 'apollo-passport-react';
+
+import 'apollo-passport-react/style/meteor.less';
+
+/*
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_ONLY'
 });
+*/
 
 const App = ({ userId, currentUser }) => {
   return (
     <div>
-      <LoginButtons visible="true" />
+      <LoginButtons apolloPassport={apolloPassport} />
       { userId ? (
         <div>
           <pre>{JSON.stringify(currentUser, null, 2)}</pre>

@@ -12,17 +12,22 @@ type User {
   randomString: String
 }
 
-type Query {
+type RootQuery {
   user(id: String!): User
 }
 
+type RootMutation {
+  exampleString: String
+}
+
 schema {
-  query: Query
+  query: RootQuery,
+  mutation: RootMutation
 }
 `];
 
 export const resolvers = {
-  Query: {
+  RootQuery: {
     async user(root, args, context) {
       // Only return the current user, for security
       if (context.userId === args.id) {
