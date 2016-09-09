@@ -30,13 +30,14 @@ export const resolvers = {
   RootQuery: {
     async user(root, args, context) {
       // Only return the current user, for security
-      if (context.userId === args.id) {
-        return await Meteor.users.findOne(context.userId);
+      if (context.auth.userId === args.id) {
+        return await Meteor.users.findOne(args.id);
       }
     },
   },
   User: {
-    emails: ({emails}) => emails,
+    username: ({username}) => username || '(no username set)',
+    emails: ({emails}) => emails.map(x => x.verified = (x.verified || 'false') && x),
     randomString: () => Random.id(),
   }
 }

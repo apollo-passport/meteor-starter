@@ -5,8 +5,8 @@ import { createContainer } from 'meteor/react-meteor-data';
 import gql from 'graphql-tag';
 
 import { apolloPassport } from '../../client/apollo';
+import apConnect from 'apollo-passport-react/lib/connect';
 import { LoginButtons } from 'apollo-passport-react';
-
 import 'apollo-passport-react/style/meteor.less';
 
 /*
@@ -57,10 +57,16 @@ const AppWithData = connect({
 })(App);
 
 // This container brings in Tracker-enabled Meteor data
+/*
 const AppWithUserId = createContainer(() => {
   return {
     userId: Meteor.userId(),
   };
 }, AppWithData);
+*/
+
+const AppWithUserId = apConnect(
+  ({ auth }) => ({ userId: auth.data.userId })
+)(AppWithData);
 
 export default AppWithUserId;
