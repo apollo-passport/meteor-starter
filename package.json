@@ -6,10 +6,10 @@
   },
   "dependencies": {
     "apollo-client": "^0.4.14",
-    "apollo-passport": "0.0.5",
+    "apollo-passport": "0.0.7",
     "apollo-passport-local": "0.0.3",
     "apollo-passport-mongodb": "0.0.1",
-    "apollo-passport-react": "0.0.2",
+    "apollo-passport-react": "0.0.3",
     "apollo-server": "^0.2.8",
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",

@@ -1,5 +1,5 @@
 import ApolloClient from 'apollo-client';
-import { meteorClientConfig } from 'meteor/apollo-passport';
+import { meteorClientConfig } from 'meteor/gadicc:apollo-passport';
 
 import ApolloPassport from 'apollo-passport/lib/client';
 import ApolloPassportLocal from 'apollo-passport-local/lib/client';

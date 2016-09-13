@@ -1,5 +1,5 @@
 import ApolloPassport from 'apollo-passport';
-import { createApolloServer, createApolloPassport } from 'meteor/apollo-passport';
+import { createApolloServer, createApolloPassport } from 'meteor/gadicc:apollo-passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 
